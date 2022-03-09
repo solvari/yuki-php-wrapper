@@ -31,8 +31,8 @@ class SalesInvoice
 
     private $reference;
     private $subject;
-    private $paymentID;
     private $paymentMethod;
+    private $paymentID;
     private $process;
     private $emailToCustomer;
     private $layout;
