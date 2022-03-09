@@ -31,6 +31,7 @@ class SalesInvoice
 
     private $reference;
     private $subject;
+    private $paymentID;
     private $paymentMethod;
     private $process;
     private $emailToCustomer;
@@ -97,6 +98,11 @@ class SalesInvoice
         return $this -> paymentMethod;
     }
 
+    public function getPaymentID()
+    {
+        return $this -> paymentID;
+    }
+
     public function getLayout()
     {
         return $this -> layout;
@@ -146,6 +152,12 @@ class SalesInvoice
             throw new Exception\NonAllowedEnumValueException(__CLASS__, 'PaymentMethod', $paymentMethod, json_encode($enum));
         }
         $this -> paymentMethod = $paymentMethod;
+        return $this;
+    }
+
+    public function setPaymentID($paymentID)
+    {
+        $this -> paymentID = $paymentID;
         return $this;
     }
 
